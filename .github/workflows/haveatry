@@ -4,18 +4,26 @@ on:
   push:
   schedule:
     - cron: '0 21 * * *'
-    jobs:
+
+jobs:
   bot:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: 'Install node'
-        uses: actions/setup-node@v1
-      - name: 'Install NPM dependencies'
-        run: npm install
-      - name: 'Run code'
-        run: node index.js
-        env:
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          WEATHER_API_TOKEN: ${{ secrets.WEATHER_API_TOKEN }}
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
+      - name: 'Get weather report'
+         run: bash ./weather.sh
+      - name: 'Send mail'
+        uses: dawidd6/action-send-mail@master
+        with:
+          serveraddress: smtp.163.com
+          serverport: 465
+          username: ${{ secrets.MAILUSERNAME }}
+          password: ${{ secrets.MAILPASSWORD }}
+          subject: Shanghai Weather Report
+          body: file://result.html
+          to: 13917732040@139.com
+          from: GitHub Actions
+          content_type: text/html
+    
+          
