@@ -18,8 +18,8 @@ jobs:
         with:
           serveraddress: smtp.qq.com
           serverport: 465
-          username: ${{ secrets.MAILUSERNAME }}
-          password: ${{ secrets.MAILPASSWORD }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD}}
           subject: Shanghai Weather Report
           body: file://result.html
           to: 13917732040@139.com
