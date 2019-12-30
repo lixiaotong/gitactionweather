@@ -16,10 +16,10 @@ jobs:
       - name: 'Send mail'
         uses: dawidd6/action-send-mail@master
         with:
-          serveraddress: smtp.qq.com
+          serveraddress: smtp.163.com
           serverport: 465
-          username: 276125681@qq.com
-          password: gdsvajigmcpabgbc
+          username: coderstephenlee@163.com
+          password: Yqqlmgs1cl
           subject: Shanghai Weather Report
           body: file://result.html
           to: 13917732040@139.com
