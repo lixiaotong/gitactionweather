@@ -22,6 +22,6 @@ jobs:
           password: ${{secrets.MAIL_PASSWORD}}
           subject: Shanghai Weather Report
           body: file://result.html
-          to: 13917732040@139.com
+          to: 276125681@qq.com
           from: GitHub Actions
           content_type: text/html
