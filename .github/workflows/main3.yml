@@ -25,7 +25,7 @@ jobs:
            # Optional (recommended) mail server password:
            password: ${{ secrets.QQMAILKEY1 }}
            # Required mail subject:
-           subject: Github Actions SendEmail Success
+           subject: Everyday News
            # Required recipients' addresses:
            to: 13917732040@139.com
            # Required sender full name (address can be skipped):
@@ -41,7 +41,7 @@ jobs:
               <body>
               <h1>天气预报</h1>
               <div align="center">
-              <img src="./Shanghai.png">
+              <img src="file://Shanghai.png">
               </div>
               </body>
               </html>
@@ -58,7 +58,7 @@ jobs:
            # Optional converting Markdown to HTML (set content_type to text/html too):
            convert_markdown: true
            # Optional attachments:
-           attachments: ./dist/static/Shanghai.png
+           attachments: ./Shanghai.png
            # attachments.zip,git.diff,./dist/static/*.js
            # Optional priority: 'high', 'normal' (default) or 'low'
            priority: low
