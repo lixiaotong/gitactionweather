@@ -18,8 +18,8 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: ${{secrets.MAIL_USERNAME}}
-          password: ${{secrets.MAIL_PASSWORD}}
+          username: 276125681@qq.com
+          password: wybyjenqeruwbigd
           subject: Shanghai Weather Report By Stephen Lee
           body: file://result.html
           to: 276125681@qq.com
