@@ -1,4 +1,4 @@
-name: basicWorkWell
+name: test basic action
 
 on: [push]
 #在提交成功的时候触发
