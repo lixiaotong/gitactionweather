@@ -1,0 +1,54 @@
+name: 'Weather Bot'
+ 
+on:
+  push:
+  schedule:
+    - cron: '0 21 * * *'
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
+      - name: 'Get Result'
+        run: bash ./weather.sh
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+           # Required mail server address:
+           server_address: smtp.qq.com
+           # Required mail server port:
+           server_port: 465
+           # Optional (recommended): mail server username:
+           username: ${{ secrets.QQMAILNAME }}
+           # Optional (recommended) mail server password:
+           password: ${{ secrets.QQMAILKEY1 }}
+           # Required mail subject:
+           subject: Github Actions SendEmail Success
+           # Required recipients' addresses:
+           to: 13917732040@139.com
+           # Required sender full name (address can be skipped):
+           from: StephenLee # <user@example.com>
+           # Optional whether this connection use TLS (default is true if server_port is 465)
+           secure: true
+           # Optional plain body:
+           body: Build job of ${{github.repository}} completed successfully!
+           # Optional HTML body read from file:
+           html_body: file://result.html
+           # Optional carbon copy recipients:
+           # cc: 
+           # Optional blind carbon copy recipients:
+           # bcc: r2d2@example.com,hansolo@example.com
+           # Optional recipient of the email response:
+           # reply_to: luke@example.com
+           # Optional Message ID this message is replying to:
+           # in_reply_to: <random-luke@example.com>
+           # Optional unsigned/invalid certificates allowance:
+           ignore_cert: true
+           # Optional converting Markdown to HTML (set content_type to text/html too):
+           convert_markdown: true
+           # Optional attachments:
+           attachments: attachments.zip,git.diff,./dist/static/*.js
+           # Optional priority: 'high', 'normal' (default) or 'low'
+           priority: low
