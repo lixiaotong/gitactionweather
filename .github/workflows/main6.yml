@@ -35,7 +35,7 @@ jobs:
            # Optional plain body:
            body: Build job of ${{github.repository}} completed successfully!
            # Optional HTML body read from file:
-           html_body: file://result.html
+           html_body: file://Shanghai.png
            # Optional carbon copy recipients:
            # cc: 
            # Optional blind carbon copy recipients:
