@@ -2,8 +2,8 @@ name: 'Test Send Email'
  
 on:
   push:
-  schedule:
-    - cron: '0 21 * * *'
+  #schedule:
+  #  - cron: '0 21 * * *'
 
 jobs:
   bot:
@@ -21,7 +21,7 @@ jobs:
            # Optional (recommended) mail server password:
            password: ${{ secrets.QQMAILKEY1 }}
            # Required mail subject:
-           subject: Github Actions job result
+           subject: Github Actions SendEmail Success
            # Required recipients' addresses:
            to: 13917732040@139.com
            # Required sender full name (address can be skipped):
@@ -31,7 +31,7 @@ jobs:
            # Optional plain body:
            body: Build job of ${{github.repository}} completed successfully!
            # Optional HTML body read from file:
-           html_body: aaa
+           html_body: helloworld
            # Optional carbon copy recipients:
            # cc: 
            # Optional blind carbon copy recipients:
