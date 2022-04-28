@@ -5,11 +5,6 @@ on:
   schedule:
     - cron: '0 21 * * *'
 
-
-
-
-
-
 jobs:
   bot:
     runs-on: ubuntu-latest
@@ -36,7 +31,7 @@ jobs:
            # Optional plain body:
            body: Build job of ${{github.repository}} completed successfully!
            # Optional HTML body read from file:
-           html_body: file://README.html
+           html_body: aaa
            # Optional carbon copy recipients:
            cc: kyloren@example.com,leia@example.com
            # Optional blind carbon copy recipients:
