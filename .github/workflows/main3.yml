@@ -17,9 +17,9 @@ jobs:
            # Required mail server port:
            server_port: 465
            # Optional (recommended): mail server username:
-           username: 276125681@qq.com
+           username: ${{ secrets.QQMAILNAME }}
            # Optional (recommended) mail server password:
-           password: wybyjenqeruwbigd
+           password: ${{ secrets.QQMAILKEY1 }}
            # Required mail subject:
            subject: Github Actions job result
            # Required recipients' addresses:
