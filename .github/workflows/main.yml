@@ -1,6 +1,7 @@
 name: CI
 
 on: [push]
+#在提交成功的时候触发
 
 jobs:
   build:
