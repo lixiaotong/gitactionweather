@@ -41,7 +41,7 @@ jobs:
               <body>
               <h1>天气预报</h1>
               <div align="center">
-              <img src="file://Shanghai.png">
+              <img src="cid:0">
               </div>
               </body>
               </html>
