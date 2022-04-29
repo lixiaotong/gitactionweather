@@ -1,0 +1,29 @@
+name: 'Weather Bot'
+ 
+on:
+ # push:
+ # schedule:
+#    - cron: '0 21 * * *'
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v2
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+          python-version:3.7
+      - name: 'Install dependencies'
+        run: python -m pip install --upgrade pip
+      - name: 'Install requirements'
+        run: pip install -r ./pythonbot/requirements.txt
+      - name: 'Get weather png'
+        run: bash ./weather.sh
+      - name: 'Send mail'
+        env:
+          username: ${{ secrets.QQMAILNAME }}
+          password: ${{ secrets.QQMAILKEY1 }}
+        run: python ./pythonbot/sendmail.py ${username} ${password}
+      
