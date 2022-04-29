@@ -7,15 +7,15 @@
 3. step（步骤）：每个 job 由多个 step 构成，一步步完成。
 4. action （动作）：每个 step 可以依次执行一个或多个命令（action）
 
-    `
+    
     name: 'GitHub Actions CSDN Email Bot'  
-      on:  
-      push:  
-        branches:   
-          - master 
-      schedule:  
-        - cron: '0 14 * * *' 
-     `
+      on:       
+      push:         
+        branches:       
+          - master      
+      schedule:        
+        - cron: '0 14 * * *'   
+     
 
 name 是该配置文件的名字. 
 on 是触发条件，我们指定两种情况下触发.     
@@ -26,13 +26,13 @@ on 是触发条件，我们指定两种情况下触发.
 
 计划任务语法有五个字段，中间用空格分隔，每个字段代表一个时间单位. 
 
-┌───────────── minute (0 - 59)
-│ ┌───────────── hour (0 - 23)
-│ │ ┌───────────── day of the month (1 - 31)
-│ │ │ ┌───────────── month (1 - 12 or JAN-DEC)
-│ │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
-│ │ │ │ │
-│ │ │ │ │
+┌───────────── minute (0 - 59)  
+│ ┌───────────── hour (0 - 23)  
+│ │ ┌───────────── day of the month (1 - 31)  
+│ │ │ ┌───────────── month (1 - 12 or JAN-DEC)  
+│ │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)  
+│ │ │ │ │    
+│ │ │ │ │    
 
 
 
