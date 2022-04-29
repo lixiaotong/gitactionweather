@@ -1,4 +1,4 @@
-name: 'Weather Bot'
+name: 'Weather Bot others action'
  
 on:
   push:
