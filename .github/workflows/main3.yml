@@ -1,7 +1,7 @@
 name: 'Weather Bot others action'
  
 on:
- # push:
+  push:
  # schedule:
  #   - cron: '0 21 * * *'
 
